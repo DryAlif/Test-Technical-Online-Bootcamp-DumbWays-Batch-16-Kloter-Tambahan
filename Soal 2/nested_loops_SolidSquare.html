@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    function drawPattern(n) {
+
+        let x = 1;
+        if (n % 2 == 0) {
+            console.log("Angka harus ganjil!");
+        } else {
+
+            for (let i = 1; i <= n; i++) 
+            { 
+                for (let j = 1; j <= n; j++) 
+                {                  
+                    // First two conditions are 
+                    // for outer hollow square and 
+                    // next two conditions are for 
+                    // inner solid square 
+                    // if ((i == 1 || i == n) || 
+                    //     (j == 1 || j == n) || 
+                    //     (i >= 3 && i <= n - 2) && 
+                    //     (j >= 2 && j <= n - 1)) 
+                    if ((i == 1 || i == n) || (j == 1 || j == n) || 
+            (i >= 3 && i <= n - 2) && (j >= 2 && j <= n - 1)) 
+                     //   document.write(`${i}`);
+                        document.write('*');
+                
+                    else
+                    document.write("=");
+                } 
+                document.write('<br/>');
+            }
+
+        }
+    }
+
+    drawPattern(9);
+</script>
+<body>
+  
+</body>
+
+</html>

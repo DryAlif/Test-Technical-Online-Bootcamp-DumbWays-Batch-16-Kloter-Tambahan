@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script defer type="text/javascript">
+function hitungKembalian(total_belanja, uang) {
+  
+ 
+  let totalkembali = uang - total_belanja;
+  let cashBack = 0.10 * total_belanja;
+  let kembali = totalkembali + cashBack;
+
+
+  let DuaPuluhRibu = Math.floor(kembali / 20000);
+  let sisa = kembali % 20000;
+  let SepuluhRibu = Math.round(sisa / 10000);
+  sisa = sisa % 10000;
+  let limaRibu = Math.round(sisa / 5000);
+  sisa = sisa % 5000;
+  let totalsisa = Math.round(sisa / 3500);
+
+  console.log(DuaPuluhRibu + " x 20000" + "\n" + 
+              SepuluhRibu + " x 10000" + "\n" + 
+              limaRibu + " x 2000" + "\n" + 
+              totalsisa + " x 3500 Disumbangkan");
+}
+
+hitungKembalian(240000, 250000);
+</script>
+<body>
+    
+</body>
+</html>
